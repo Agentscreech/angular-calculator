@@ -6,7 +6,6 @@ angular.module('App', [])
     $scope.operator = "";
     $scope.operatorPressed = false;
     $scope.appendNumber = function(num){
-        console.log("somthing was pressed");
         if($scope.operatorPressed){
             $scope.number = '';
             $scope.operatorPressed = false;
@@ -36,6 +35,7 @@ angular.module('App', [])
         } else {
             $scope.number = doMath($scope.firstNumber, $scope.number, $scope.operator);
             $scope.firstNumber = $scope.number;
+            $scope.operator = '';
         }
         $scope.operatorPressed = true;
     };
@@ -48,6 +48,7 @@ angular.module('App', [])
         } else {
             $scope.number = doMath($scope.firstNumber, $scope.number, $scope.operator);
             $scope.firstNumber = $scope.number;
+            $scope.operator = '';
         }
         $scope.operatorPressed = true;
     };
@@ -60,6 +61,7 @@ angular.module('App', [])
         } else {
             $scope.number = doMath($scope.firstNumber, $scope.number, $scope.operator);
             $scope.firstNumber = $scope.number;
+            $scope.operator = '';
         }
         $scope.operatorPressed = true;
     };
@@ -72,6 +74,7 @@ angular.module('App', [])
         } else {
             $scope.number = doMath($scope.firstNumber, $scope.number, $scope.operator);
             $scope.firstNumber = $scope.number;
+            $scope.operator = '';
         }
         $scope.operatorPressed = true;
     };
